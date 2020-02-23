@@ -28,8 +28,10 @@ const Login = props => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor='username'>Username</label>
         <input
-          placeholder='Username'
+          // placeholder='Username'
+          id='username'
           name='username'
           onChange={e => setUsername(e.target.value)}
           ref={register({
@@ -37,9 +39,11 @@ const Login = props => {
           })}
         />
         {errors.username && errors.username.message}
-
+        
+        <label htmlFor='password'>Password</label>
         <input
-          placeholder='Password'
+          // placeholder='Password'
+          id='password'
           name='password'
           onChange={e => setPassword(e.target.value)}
           ref={register({
